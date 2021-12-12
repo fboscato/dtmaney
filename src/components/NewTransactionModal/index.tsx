@@ -26,9 +26,9 @@ export function NewTransactionModal({
     event.preventDefault();
 
     await createTransaction({
-      amount,
-      category,
       title,
+      amount,
+      category,      
       type
     })
     setTitle('')

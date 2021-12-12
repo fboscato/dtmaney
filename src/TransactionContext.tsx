@@ -1,4 +1,4 @@
-import { promises } from "dns";
+// import { promises } from "dns";
 import { createContext, ReactNode, useState, useEffect } from "react";
 import { api } from "./services/api";
 
