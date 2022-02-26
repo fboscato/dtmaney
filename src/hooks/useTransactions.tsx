@@ -1,6 +1,6 @@
 // import { promises } from "dns";
-import { createContext, ReactNode, useState, useEffect } from "react";
-import { api } from "./services/api";
+import { createContext, ReactNode, useState, useEffect, useContext } from "react";
+import { api } from "../services/api";
 
 
 interface Transaction {
@@ -50,4 +50,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
             {children}
         </TransactionsContext.Provider>
     )
+}
+export function useTransactions() {
+    const context = useContext(TransactionsContext);
+
+    return context;
 }
